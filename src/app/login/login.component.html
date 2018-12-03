@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="title">Login page</div>
+
+<div class="form-container">
+    <div class="form-header">UserName</div>
+    <input [(ngModel)]="username"/>
+</div>
+
+<div class="form-container">
+    <div class="form-header">Password</div>
+    <input [(ngModel)]="password"/>
+</div>
+
+<button class="form-button" (click)="login(username, password)">Login</button>
+
+</div>

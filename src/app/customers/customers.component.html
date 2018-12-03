@@ -1,0 +1,64 @@
+
+<div class="container"><div class="title">Customers</div>
+
+<mat-table #table matSort [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="customerID">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Customer ID</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.customerID}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="companyName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Company Name</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.companyName}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="contactName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Contact Name</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.contactName}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="contactTitle">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Contact Title</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.contactTitle}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Address</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.address}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="city">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>City</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.city}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="region">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Region</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.region}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="postalCode">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>PostalCode</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.postalCode}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="country">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Country</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.country}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="phone">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Phone</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.phone}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="fax">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Fax</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.fax}} </mat-cell>
+    </ng-container>
+
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    
+</mat-table>
+<mat-paginator #paginator [length]="resultsLength" [pageSize]="5"  showFirstLastButtons>
+</mat-paginator>
+</div>

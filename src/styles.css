@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.container{
+    padding: 50px;
+}
+
+.mat-table{
+    border: 1px solid  #fafafa;
+    border-radius:5px
+}
+
+.mat-header-row{
+    background-color: #fafafa;
+    border: 1px solid  #fafafa;
+}
+
+.mat-row{
+    border: 1px solid  #fafafa;
+}
+
+.mat-header-cell{
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+.mat-cell{
+    font-size: 16px;
+}
+.header{
+    background-color: #003057;
+    height:70px;
+}
+
+.header-login{
+    color: #fff;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 40px;
+    background-color: #505759;
+    padding: 10px;
+}
+
+.form-container{
+    margin-bottom: 40px;
+}
+
+.form-header{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.form-button{
+    background-color: #1A8CaC;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+    color: #fff;
+}
