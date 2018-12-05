@@ -1,7 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <div class="header">
-  <a class="header-login" routerLink="/login">Login</a>
+  <a class="header-login" *ngIf="!isLoggedIn" routerLink="/login">Login</a>
+
+  <span *ngIf="isLoggedIn" class="header-text">Hi! {{loggedInUser}}</span>
+  <a class="header-login" *ngIf="isLoggedIn" (click)="logout()">Logout</a>
 </div>
 
 

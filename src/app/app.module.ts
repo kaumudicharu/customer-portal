@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {MatTableModule, MatPaginatorModule} from '@angular/material';
+import {MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule, MatSelectModule} from '@angular/material';
 import { CustomerComponent } from './customers/customers.component';
+import { EventEmitterService } from './services/eventEmitterService';
+import { AuthGuardService } from './services/authGuardservice';
 const appRoutes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'customers', component: CustomerComponent }
+  { path: 'customers', component: CustomerComponent, canActivate: [AuthGuardService]  }
 ];
 @NgModule({
   declarations: [
@@ -25,11 +27,14 @@ const appRoutes: Routes = [
     HttpModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatSelectModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes)
   ],
-  providers: [],
+  providers: [EventEmitterService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
